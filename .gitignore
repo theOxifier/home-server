@@ -1,3 +1,4 @@
 *.sw*
 **/private_config*.yaml
 **/auth
+**/secrets

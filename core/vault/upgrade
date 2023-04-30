@@ -1,0 +1,8 @@
+#!/bin/bash
+helm repo add hashicorp https://helm.releases.hashicorp.com
+helm repo update hashicorp
+helm upgrade --install \
+  vault hashicorp/vault \
+  --create-namespace \
+  --namespace=vault \
+  -f configs/public_config.yaml
