@@ -1,0 +1,7 @@
+inadynConfig: |
+  period      = 60
+  provider domains.google.com:1 {
+    hostname = foxnheart.com
+    username = # username_key
+    password = # password_key
+  }

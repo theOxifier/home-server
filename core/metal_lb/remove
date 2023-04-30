@@ -1,0 +1,3 @@
+#!/bin/bash
+helm delete metallb --namespace metallb-system
+kubectl delete ns metallb-system

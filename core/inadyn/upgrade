@@ -1,0 +1,8 @@
+#!/bin/bash
+helm repo add philippwaller https://charts.philippwaller.com
+helm repo update philippwaller
+helm upgrade --install \
+  inadyn philippwaller/inadyn \
+  --create-namespace \
+  --namespace=inadyn \
+  -f configs/private_config.yaml

@@ -1,0 +1,3 @@
+#!/bin/bash
+helm -n cert-manager uninstall cert-manager
+kubectl delete ns cert-manager

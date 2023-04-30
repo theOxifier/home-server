@@ -1,0 +1,9 @@
+#!/bin/bash
+
+SERVICES="cert-manager inadyn metal_lb ingress"
+for repo in $(echo $SERVICES)
+do
+    pushd $repo
+    ./remove &
+    popd
+done

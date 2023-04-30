@@ -1,0 +1,14 @@
+#!/bin/bash
+helm repo add metallb https://metallb.github.io/metallb
+helm repo update metallb
+# 12
+helm upgrade --install \
+  metallb metallb/metallb \
+  --create-namespace \
+  --namespace metallb-system \
+  --version v0.12.1 \
+  -f configs/public_config.yaml
+
+# 13
+#helm upgrade --install metallb metallb/metallb --namespace metallb-system --version v0.13.5
+#kubectl -n metallb-system create -f address_pool.yml

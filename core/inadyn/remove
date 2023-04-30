@@ -1,0 +1,3 @@
+#!/bin/bash
+helm uninstall inadyn --namespace inadyn
+kubectl delete ns inadyn

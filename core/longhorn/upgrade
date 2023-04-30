@@ -1,0 +1,9 @@
+#!/bin/bash
+helm repo add longhorn https://charts.longhorn.io
+helm repo update longhorn
+helm upgrade --install \
+  longhorn longhorn/longhorn \
+  --create-namespace \
+  --namespace longhorn-system \
+  --version 1.4.1 \
+  -f configs/public_config.yaml
